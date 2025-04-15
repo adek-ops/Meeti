@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hubungi Kami</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .contact-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      animation: fadeIn 1s ease forwards;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1em;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #bbb;
+    }
+
+    button {
+      background-color: #00c6ff;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #66d9ff;
+    }
+
+    .success-message {
+      display: none;
+      background-color: #28a745;
+      color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      animation: fadeInMessage 0.5s ease forwards;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    .fade-out {
+      opacity: 0 !important;
+    }
+
+    .back-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .back-button a {
+      background-color: #00c6ff;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 1em;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button a:hover {
+      background-color: #66d9ff;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInMessage {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-container">
+    <h1>Hubungi Kami</h1>
+    <form action="https://formspree.io/f/adekagung" method="POST" id="contact-form">
+      <input type="text" name="name" placeholder="Nama Lengkap" required />
+      <input type="email" name="email" placeholder="Email Anda" required />
+      <textarea name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+    <div class="success-message" id="success-message">
+      <strong>Pesan berhasil terkirim! 🎉</strong>
+    </div>
+
+    <!-- Tombol Kembali ke Beranda -->
+    <div class="back-button">
+      <a href="index.html">Kembali ke Beranda</a>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("contact-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        // Tampilkan pesan sukses
+        successMessage.classList.remove("fade-out");
+        successMessage.style.display = 'block';
+        form.reset();
+
+        // Sembunyikan dengan animasi fade-out setelah 3 detik
+        setTimeout(() => {
+          successMessage.classList.add("fade-out");
+        }, 3000);
+
+        // Benar-benar hilangkan dari tampilan setelah animasi selesai
+        setTimeout(() => {
+          successMessage.style.display = 'none';
+          successMessage.classList.remove("fade-out");
+        }, 2000);
+      }).catch(error => {
+        alert("Terjadi kesalahan. Silakan coba lagi.");
+      });
+    });
+  </script>
+</body>
+</html>

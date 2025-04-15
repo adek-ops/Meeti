@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sejarah Masuknya Agama Hindu ke Indonesia</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Merriweather', serif;
+      scroll-behavior: smooth;
+    }
+
+    /* Animation for smooth transitions */
+    .section-content {
+      display: none;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+
+    .section-content.open {
+      display: block;
+      padding: 10px 0;
+      max-height: 1000px; /* Arbitrary large number to ensure content shows */
+    }
+
+    /* Tanda panah */
+    .section-header span {
+      transition: transform 0.3s ease;
+    }
+
+    .section-header.open span {
+      transform: rotate(180deg); /* Rotate arrow on open */
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Hero Header -->
+  <header class="relative h-64 bg-cover bg-center" style="background-image: url('Prambanan_Temple_Yogyakarta_Indonesia.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <h1 class="text-3xl md:text-5xl text-white font-bold text-center px-4">Sejarah Masuknya Agama Hindu ke Indonesia</h1>
+    </div>
+  </header>
+
+    <!-- Artikel Card -->
+  <main class="max-w-3xl mx-auto p-6 mt-8 bg-white rounded-xl shadow-lg">
+    <article>
+      <img src="Prambanan_Temple_Yogyakarta_Indonesia.jpg" alt="Candi Prambanan" class="rounded-lg shadow-md mb-6">
+
+      <p class="mb-6 leading-relaxed text-justify">
+        Sejarah masuknya agama Hindu ke Indonesia bukanlah cerita singkat. Ia adalah kisah panjang tentang pelayaran, perdagangan, budaya, dan kepercayaan yang menyatu secara damai. Agama Hindu mulai masuk ke Nusantara sekitar abad ke-1 Masehi melalui hubungan dagang dengan India.
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1">Awal Masuknya Hindu: Jalur Laut dan Pedagang India</h2>
+      <p class="mb-6 leading-relaxed text-justify">
+        Para pedagang India berlayar ke Nusantara membawa rempah-rempah, kain, dan juga kepercayaan mereka. Melalui interaksi dagang ini, budaya dan agama mereka pun ikut tersebar. Salah satu teori terkenal adalah <strong>teori Brahmana</strong>, yang menyebutkan bahwa para brahmana India datang dan menyebarkan ajaran Hindu ke kalangan elit lokal.
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1">Kerajaan Hindu Awal di Indonesia</h2>
+      <p class="mb-6 leading-relaxed text-justify">
+        Salah satu kerajaan Hindu pertama di Indonesia adalah <strong>Kerajaan Kutai</strong> di Kalimantan Timur, yang diperkirakan berdiri pada abad ke-4 Masehi. Prasasti Yupa menjadi bukti penting adanya pengaruh Hindu. Kemudian muncul kerajaan besar lainnya seperti <strong>Tarumanagara</strong> di Jawa Barat dan <strong>Majapahit</strong> yang sangat legendaris.
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1">Puncak Kejayaan Hindu: Kerajaan Majapahit</h2>
+      <p class="mb-6 leading-relaxed text-justify">
+        Majapahit adalah puncak kejayaan agama Hindu di Indonesia. Kerajaan ini bukan hanya kuat secara militer, tapi juga menjadi pusat budaya dan kesusastraan Hindu-Buddha. Kitab-kitab seperti <em>Nagarakretagama</em> dan <em>Sutasoma</em> lahir pada masa ini.
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1">Warisan Hindu Hingga Kini</h2>
+      <p class="mb-6 leading-relaxed text-justify">
+        Meski Islam menjadi agama dominan sejak abad ke-15, warisan Hindu tetap hidup, terutama di Bali. Tradisi, upacara, arsitektur, dan bahkan sistem kasta masih diterapkan. Candi-candi seperti <strong>Prambanan</strong> menjadi saksi bisu kemegahan masa lalu yang masih bisa dinikmati hari ini.
+      </p>
+
+      <p class="mb-6 leading-relaxed text-justify italic text-gray-700">
+        Sejarah ini membuktikan bahwa Indonesia adalah tanah pertemuan budaya besar dunia. Hindu datang bukan dengan penaklukan, tapi melalui hubungan yang damai dan penuh penghargaan budaya. Dan hingga kini, jejaknya masih kuat melekat dalam kehidupan masyarakat Indonesia.
+      </p>
+
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1 section-header" onclick="toggleSection('perkembangan')">
+        Perkembangan Agama Hindu
+        <span class="fas fa-chevron-down"></span> <!-- FontAwesome down arrow -->
+      </h2>
+      <div id="perkembangan" class="section-content">
+        <p class="leading-relaxed text-justify">Agama Hindu di Indonesia memiliki perjalanan panjang sejak masuk pertama kali...</p>
+        <p class="leading-relaxed text-justify">Selama berabad-abad, Hindu berkembang pesat di berbagai kerajaan Indonesia...</p>
+        <p class="leading-relaxed text-justify">Bali menjadi salah satu pusat utama berkembangnya agama Hindu...</p>
+        <p class="leading-relaxed text-justify">Meskipun agama Hindu sempat menurun, namun kini kembali mendapatkan perhatian...</p>
+        <p class="leading-relaxed text-justify">Hindu telah menjadi bagian integral dalam budaya Indonesia...</p>
+      </div>
+      
+      <h2 class="text-2xl font-semibold mb-2 mt-8 border-b pb-1 section-header" onclick="toggleSection('peran')">
+  Peran Agama Hindu di Kehidupan
+  <span class="fas fa-chevron-down"></span> <!-- FontAwesome down arrow -->
+</h2>
+<div id="peran" class="section-content">
+  <p class="leading-relaxed text-justify">Agama Hindu memiliki peran penting dalam membentuk nilai-nilai budaya dan sosial di Indonesia, khususnya di wilayah Bali dan beberapa daerah lain. Ajaran-ajaran seperti dharma (kebenaran) dan karma (akibat perbuatan) telah menjadi landasan dalam kehidupan sehari-hari masyarakatnya.</p>
+  <p class="leading-relaxed text-justify">Dalam bidang pendidikan dan moralitas, Hindu mengajarkan pentingnya disiplin, penghormatan kepada orang tua, dan keselarasan dengan alam. Nilai-nilai ini tertanam sejak dini dalam keluarga dan komunitas.</p>
+  <p class="leading-relaxed text-justify">Peran agama Hindu juga sangat terasa dalam pelestarian budaya, mulai dari upacara adat, tari-tarian, hingga arsitektur seperti pura dan candi yang masih dijaga keasliannya. Semua itu menjadi warisan budaya yang memperkaya identitas nasional.</p>
+  <p class="leading-relaxed text-justify">Hindu juga berperan dalam mempererat hubungan sosial antarwarga. Melalui berbagai upacara dan gotong royong, masyarakat Hindu memperkuat rasa kebersamaan dan solidaritas.</p>
+  <p class="leading-relaxed text-justify">Secara spiritual, Hindu memberikan panduan hidup yang mendalam. Praktik meditasi, yoga, dan ritual harian membantu individu mencapai ketenangan batin dan kedekatan dengan Tuhan.</p>
+</div>
+
+      <div class="mt-8 text-center">
+        <a href="index.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full transition">
+          ← Kembali ke Beranda
+        </a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="mt-16 text-center text-sm text-gray-500 py-4">
+    &copy; 2025 SejarahNusantara. Dibuat dengan cinta untuk edukasi.
+  </footer>
+
+  <script>
+    function toggleSection(sectionId) {
+      var section = document.getElementById(sectionId);
+      var header = section.previousElementSibling;
+      var icon = header.querySelector('span');
+      
+      section.classList.toggle('open'); // Toggle open class
+      header.classList.toggle('open');  // Toggle class to animate the arrow
+
+      if (section.classList.contains('open')) {
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up'); // Change to up arrow
+      } else {
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down'); // Change to down arrow
+      }
+    }
+  </script>
+
+</body>
+</html>

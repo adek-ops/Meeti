@@ -1,0 +1,197 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Nomor 8: SEO Meta Tags -->
+  <meta name="description" content="Website layanan terbaik untuk kebutuhan Anda. Temukan artikel menarik dan update terbaru.">
+  <meta name="keywords" content="website, layanan, artikel, berita, responsive, tailwind">
+  <meta name="Adek" content="MyWebsite Team">
+  
+  <!-- Favicon -->
+<link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>Responsive Website</title>
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+  body {
+    font-family: 'Roboto', sans-serif;
+  }
+  .hover-card:hover {
+      transform: translateY(-5px);
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  }
+</style>
+<!-- AOS Animation CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+ </head>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Preloader -->
+  <div id="loading" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <div class="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+  </div>
+  <!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="text-2xl font-bold text-blue-600">
+      MyWebsite
+    </div>
+<button class="md:hidden text-gray-700" id="menu-toggle">
+  <i class="fas fa-bars"></i>
+</button>
+
+<nav id="menu" class="space-x-6 text-sm font-medium hidden md:block">
+  <a class="text-gray-700 hover:text-blue-600 transition" href="index.html">Home</a>
+  <a class="text-gray-700 hover:text-blue-600 transition" href="about.html">About</a>
+  <a class="text-gray-700 hover:text-blue-600 transition" href="services.html">Services</a>
+  <a class="text-gray-700 hover:text-blue-600 transition" href="contact.html">Contact</a>
+</nav>
+
+<!-- JavaScript to toggle the menu on mobile -->
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+  
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+  </div>
+</header>
+<!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white py-24">
+  <div class="container mx-auto px-4 text-center">
+    <h1 class="text-5xl font-extrabold mb-4">Welcome to MyWebsite</h1>
+    <p class="text-xl mb-8 opacity-90">We provide the best services for you</p>
+    <a class="bg-white text-blue-600 px-6 py-3 rounded-full text-lg font-semibold shadow hover:bg-gray-100 transition" href="beranda.html">
+      Get Started
+    </a>
+  </div>
+</section>
+<!-- News Section -->
+<section class="py-20">
+ <div class="container mx-auto px-4">
+  <h2 class="text-3xl font-bold text-center mb-12">
+   Latest News
+  </h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+   <!-- Card 1 -->
+<div class="bg-white shadow-lg rounded-lg overflow-hidden hover-card" data-aos="fade-down">
+    <img alt="News image 1" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/_nXowNcieJSla2pZ8LjM8vSKQhzcrqbTE76dpItB8rU.jpg"/>
+    <div class="p-6">
+      <h3 class="text-xl font-bold mb-2">Struktur Hotel</h3>
+      <p class="text-gray-600 mb-4">Hotel adalah bangunan yang sebagian besar bangunan tersebut menjadi fasilitas kamar</p>
+      <a class="text-blue-600 hover:underline" href="https://mekari.com/blog/struktur-organisasi-hotel-besar-menengah-kecil-dan-tugasnya/">Read more</a>
+    </div>
+   </div>
+
+   <!-- Card 2 -->
+   <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-card" data-aos="fade-down">
+    <img alt="News image 2: A detailed description of the image content" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/hFvSYZ9PQnUFNpdFHvXs5jAXpMF6WP6b6rbiPuo3g6E.jpg"/>
+    <div class="p-6">
+     <h3 class="text-xl font-bold mb-2">Sejarah Masuknya Hindu Ke Indonesia</h3>
+     <p class="text-gray-600 mb-4">Masuknya Hindu Ke Indonesia</p>
+     <a class="text-blue-600 hover:underline" href="artikel2.html">Read more</a>
+    </div>
+   </div>
+
+   <!-- Card 3 -->
+   <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-card" data-aos="fade-down">
+    <img alt="News image 3: A detailed description of the image content" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bQKceq8kHr4-nt3NEGgUdVvc8VHFiVvx5LZpGGaDNDE.jpg"/>
+    <div class="p-6">
+     <h3 class="text-xl font-bold mb-2">News Title 3</h3>
+     <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+     <a class="text-blue-600 hover:underline" href="#">Read more</a>
+    </div>
+   </div>
+
+   <!-- Card 4 -->
+   <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-card"data-aos="fade-down">
+    <img alt="News image 4: A detailed description of the image content" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bQKceq8kHr4-nt3NEGgUdVvc8VHFiVvx5LZpGGaDNDE.jpg"/>
+    <div class="p-6">
+     <h3 class="text-xl font-bold mb-2">News Title 4</h3>
+     <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+     <a class="text-blue-500" href="#">Read more</a>
+    </div>
+   </div>
+
+   <!-- Card 5 -->
+   <div class="bg-white shadow-lg rounded-lg overflow-hidden hover-card"data-aos="fade-down">
+    <img alt="News image 5: A detailed description of the image content" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bQKceq8kHr4-nt3NEGgUdVvc8VHFiVvx5LZpGGaDNDE.jpg"/>
+    <div class="p-6">
+     <h3 class="text-xl font-bold mb-2">News Title 5</h3>
+     <p class="text-gray-700 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+     <a class="text-blue-500" href="#">Read more</a>
+    </div>
+   </div>
+
+  </div> <!-- Penutup grid -->
+ </div> <!-- Penutup container -->
+</section>
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+  <div class="container mx-auto px-4 text-center">
+    <p class="text-white">
+      © 2025 Adek. All rights reserved.
+    </p>
+    <div class="mt-4 space-x-4">
+      <a class="text-white hover:text-blue-500" href="#">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="text-white hover:text-blue-500" href="https://x.com/AgungAdek4?s=09">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a class="text-white hover:text-blue-500" href="https://www.instagram.com/berrus490?igsh=emNidGp2aXdmbmtq">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="text-white hover:text-blue-500" href="#">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" class="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hidden hover:bg-blue-700 transition">
+  <i class="fas fa-arrow-up"></i>
+</button>
+ <!-- Preloader script -->
+  <script>
+    window.addEventListener('load', () => {
+      document.getElementById('loading').style.display = 'none';
+    });
+  </script>
+</body>
+
+<script>
+  // Tampilkan tombol saat scroll ke bawah
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  window.onscroll = function() {
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+      scrollTopBtn.classList.remove('hidden');
+    } else {
+      scrollTopBtn.classList.add('hidden');
+    }
+  };
+
+  // Scroll ke atas saat tombol diklik
+  scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // durasi animasi dalam milidetik
+    easing: 'ease-in-out', // easing animation
+    once: true, // animasi hanya terjadi sekali
+  });
+</script>
+ </body>
+</html>

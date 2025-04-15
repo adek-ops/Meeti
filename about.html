@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tentang Kami</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .about-container {
+      background-color: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      animation: slideIn 1s ease-out;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .about-icon {
+      font-size: 3em;
+      color: #00d2ff;
+      margin-bottom: 10px;
+      animation: bounce 1.5s infinite;
+    }
+
+    p {
+      font-size: 1.1em;
+      color: #dddddd;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #00d2ff;
+      color: #1e3c72;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    a:hover {
+      background-color: #66e0ff;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .about-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="about-container">
+    <div class="about-icon"><i class="fas fa-users"></i></div>
+    <h1>Tentang Kami</h1>
+    <p>
+      Kami adalah tim kreatif yang berfokus pada pembuatan aplikasi sederhana, cepat, dan intuitif bagi semua pengguna.
+    </p>
+    <p>
+      Dengan semangat inovasi dan inklusivitas, kami ingin menjembatani teknologi dengan kebutuhan nyata dalam kehidupan sehari-hari.
+    </p>
+    <p>
+      Terima kasih telah mendukung perjalanan kami.
+    </p>
+    <a href="index.html">← Kembali ke Beranda</a>
+  </div>
+</body>
+</html>
