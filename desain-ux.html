@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desain UI/UX - Tim Kreatif</title>
+  <style>
+  .video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* Rasio 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+    /* Global Styles */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #2b0a3d;
+      color: #fff;
+      margin: 0;
+      padding: 50px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3em;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #b65fcf, #8e44ad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInText 1.5s ease-in-out;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      color: #e0dbe6;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #b65fcf, #8e44ad);
+    }
+
+    .content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      padding: 30px;
+      border-radius: 15px;
+      background: rgba(48, 25, 80, 0.6);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      position: relative;
+    }
+
+    .section:hover {
+      transform: translateY(-10px);
+      opacity: 0.95;
+    }
+
+    .section img,
+    .section video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .section img:hover,
+    .section video:hover {
+      transform: scale(1.05);
+    }
+
+    .section p {
+      color: #e0dbe6;
+      font-size: 1.1em;
+    }
+
+    .btn-back {
+      background-color: #b65fcf;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .btn-back:hover {
+      background-color: #a04bbc;
+    }
+
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Animation for the Section on Scroll */
+    .animate-section {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .animate-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <h1>Desain UI/UX</h1>
+  <div class="content">
+    <!-- Pengenalan Section -->
+    <div class="section animate-section">
+      <h2>Pengenalan</h2>
+      <p>Desain UI/UX adalah proses yang sangat penting dalam menciptakan aplikasi dan website yang tidak hanya menarik secara visual, tetapi juga mudah digunakan dan intuitif. Kami bekerja untuk menghasilkan pengalaman pengguna yang optimal, menggunakan prinsip desain yang modern dan teknologi terbaru.</p>
+      <p>Kami percaya bahwa desain yang bagus akan meningkatkan interaksi pengguna dan membantu bisnis Anda lebih mudah dikenal.</p>
+    </div>
+
+    <!-- Proses Desain Section -->
+    <div class="section animate-section">
+      <h2>Proses Desain</h2>
+      <p>Proses kami diawali dengan pemahaman yang mendalam tentang audiens dan tujuan dari proyek. Berikut adalah langkah-langkah kami:</p>
+      <ul>
+        <li><strong>Wireframing:</strong> Membuat kerangka dasar dari tampilan yang akan datang.</li>
+        <li><strong>Prototyping:</strong> Menciptakan prototipe interaktif untuk menguji pengalaman pengguna.</li>
+        <li><strong>Desain Visual:</strong> Menambahkan elemen visual dan estetika untuk membuat antarmuka yang menarik.</li>
+        <li><strong>Pengujian Pengguna:</strong> Mengumpulkan umpan balik pengguna dan melakukan iterasi.</li>
+      </ul>
+<img src="https://www.experienceux.co.uk/wp-content/uploads/2015/06/wireframe_example_large.jpg" alt="Contoh Wireframe UI" />
+    </div>
+
+    <!-- Video Section -->
+<div class="section animate-section">
+  <h2>Proses Desain dalam Video</h2>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/9ougG5fvA1I" allowfullscreen></iframe>
+  </div>
+       <h2>From : Dea Afrizal</h2>
+</div>
+
+    <!-- Hasil yang Dicapai Section -->
+    <div class="section animate-section">
+      <h2>Hasil yang Dicapai</h2>
+      <p>Dengan desain yang tepat, klien kami merasakan peningkatan yang signifikan dalam pengalaman pengguna dan kepuasan pelanggan. Desain yang kami tawarkan tidak hanya membuat antarmuka lebih menarik, tetapi juga memperbaiki fungsionalitas dan keterlibatan pengguna.</p>
+      <p>Dengan pengalaman kami dalam menciptakan desain UI/UX yang luar biasa, kami membantu bisnis berkembang dan mencapai tujuan mereka dengan lebih efisien.</p>
+    </div>
+
+    <!-- Tombol Kembali -->
+    <a href="services.html" class="btn-back">Kembali ke Layanan</a>
+  </div>
+
+  <script>
+    // Intersection Observer untuk animasi muncul saat scroll
+    const sections = document.querySelectorAll('.animate-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>

@@ -5,104 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Layanan Tim Kreatif</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      padding: 60px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2b0a3d, #3a185e);
+    color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
 
-    .services-container {
-      max-width: 1200px;
-      width: 100%;
-    }
+  .services-container {
+    max-width: 1200px;
+    width: 100%;
+  }
 
-    h1 {
-      text-align: center;
-      font-size: 2.8em;
-      margin-bottom: 50px;
-    }
+  h1 {
+    text-align: center;
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    background: linear-gradient(90deg, #b65fcf, #8e44ad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
 
-    .service-card {
-      background: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(10px);
-      padding: 30px 25px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, opacity 0.5s ease;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeInUp 1s forwards;
-    }
+  .service-card {
+    background: linear-gradient(145deg, rgba(72, 36, 107, 0.3), rgba(48, 25, 80, 0.4));
+    backdrop-filter: blur(8px);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+  }
 
-    .service-card:nth-child(2) { animation-delay: 0.2s; }
-    .service-card:nth-child(3) { animation-delay: 0.4s; }
-    .service-card:nth-child(4) { animation-delay: 0.6s; }
-    .service-card:nth-child(5) { animation-delay: 0.8s; }
-    .service-card:nth-child(6) { animation-delay: 1s; }
+  .service-card:nth-child(2) { animation-delay: 0.2s; }
+  .service-card:nth-child(3) { animation-delay: 0.4s; }
+  .service-card:nth-child(4) { animation-delay: 0.6s; }
+  .service-card:nth-child(5) { animation-delay: 0.8s; }
+  .service-card:nth-child(6) { animation-delay: 1s; }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .service-icon {
-      width: 50px;
-      height: 50px;
-      margin-bottom: 15px;
-      fill: #00c6ff;
-    }
+  .service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    fill: #c084fc;
+  }
 
-    .service-card h3 {
-      font-size: 1.4em;
-      margin-bottom: 10px;
-    }
+  .service-card h3 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+  }
 
-    .service-card p {
-      font-size: 1em;
-      color: #ddd;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
+  .service-card p {
+    font-size: 1em;
+    color: #e0dbe6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
 
-    .service-card a {
-      background-color: #00c6ff;
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      display: inline-block;
-    }
+  .service-card a {
+    background-color: #b65fcf;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
 
-    .service-card a:hover {
-      background-color: #66d9ff;
-    }
-  </style>
+  .service-card a:hover {
+    background-color: #a04bbc;
+  }
+</style>
 </head>
 <body>
   <div class="services-container">
-    <h1>Layanan Tim Kreatif Kami</h1>
+<h1>Layanan Tim Kreatif Kami</h1>
+
+<div style="text-align: center; margin-bottom: 40px;">
+  <a href="index.html" style="
+    display: inline-block;
+    background: #8e44ad;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;">
+    ← Kembali ke Beranda
+  </a>
+</div>
     <div class="services-grid">
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24"><path d="M3 3h18v2H3V3zm0 4h18v2H3V7zm0 4h18v2H3v-2zm0 4h12v2H3v-2zm0 4h12v2H3v-2z"/></svg>
         <h3>Desain UI/UX</h3>
         <p>Merancang antarmuka modern, intuitif, dan user-friendly untuk web dan aplikasi Anda.</p>
-        <a href="#">Pelajari Lebih Lanjut</a>
+        <a href="desain-ux.html">Pelajari Lebih Lanjut</a>
       </div>
       <div class="service-card">
         <svg class="service-icon" viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2zm0 4h16v2H4v-2z"/></svg>
@@ -136,5 +156,21 @@
       </div>
     </div>
   </div>
+  <script>
+  // Aktifkan animasi saat scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        observer.unobserve(entry.target);
+      }
+    });
+  });
+
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.style.animationPlayState = 'paused';
+    observer.observe(card);
+  });
+</script>
 </body>
 </html>
