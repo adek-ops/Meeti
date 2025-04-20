@@ -2,126 +2,372 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tentang Kami</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tentang Kami - Tim Kreatif</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+  .team-section {
+  margin-top: 70px;
+  padding: 60px 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+}
 
+.team-section h2 {
+  text-align: center;
+  font-size: 2.8em;
+  color: #f3e8ff;
+  margin-bottom: 10px;
+}
+
+.team-desc {
+  text-align: center;
+  font-size: 1.1em;
+  color: #d3c6ec;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.team-card {
+  background: #3a1a56;
+  border-radius: 18px;
+  padding: 25px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-8px);
+  background: #50206f;
+}
+
+.team-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #b87fe2;
+}
+
+.team-card h3 {
+  color: #e6d1ff;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  color: #c8b5e8;
+  font-size: 0.95em;
+}
+  
+.stats-section {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 60px 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+  margin-top: 60px;
+}
+
+.stats-section h2 {
+  text-align: center;
+  font-size: 2.8em;
+  color: #f3e8ff;
+  margin-bottom: 10px;
+}
+
+.stats-desc {
+  text-align: center;
+  color: #d5c8e9;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  background: #3a1a56;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.05);
+}
+
+.stat-card svg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.stat-card h3 {
+  font-size: 2.2em;
+  margin: 0;
+  color: #e7caff;
+}
+
+.stat-card p {
+  font-size: 1.1em;
+  color: #d2c5e0;
+  margin-top: 8px;
+}
+  
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom right, #1e3c72, #2a5298);
-      color: #ffffff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-      animation: fadeIn 1s ease-out;
+      background-color: #1c0e2e;
+      color: #eee;
     }
 
-    .about-container {
-      background-color: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      padding: 50px 40px;
-      border-radius: 20px;
-      max-width: 700px;
-      width: 100%;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    header {
+      background: linear-gradient(90deg, #8e44ad, #6c3483);
+      padding: 40px 20px;
       text-align: center;
-      animation: slideIn 1s ease-out;
+      color: white;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 20px;
-      color: #ffffff;
-    }
-
-    .about-icon {
+    header h1 {
       font-size: 3em;
-      color: #00d2ff;
-      margin-bottom: 10px;
-      animation: bounce 1.5s infinite;
+      margin: 0;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
-    p {
-      font-size: 1.1em;
-      color: #dddddd;
+    .container {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 60px;
+      background-color: rgba(255,255,255,0.03);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      border-left: 5px solid #b65fcf;
+      padding-left: 15px;
+      font-size: 2em;
       margin-bottom: 20px;
-      line-height: 1.8;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 10px 20px;
-      background-color: #00d2ff;
-      color: #1e3c72;
-      border-radius: 8px;
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .member {
+      flex: 1 1 200px;
+      background: #2d1443;
+      border-radius: 12px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .member img {
+      width: 100px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .stat {
+      flex: 1 1 200px;
+      margin: 10px;
+      font-size: 1.5em;
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .cta a {
+      background-color: #b65fcf;
+      padding: 15px 30px;
       text-decoration: none;
+      color: white;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-
-    a:hover {
-      background-color: #66e0ff;
-      transform: translateY(-2px);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {opacity: 0; transform: translateY(-50px);}
+      to {opacity: 1; transform: translateY(0);}
     }
 
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
-    }
-
-    @media (max-width: 600px) {
-      .about-container {
-        padding: 30px 20px;
-      }
-
-      h1 {
-        font-size: 2em;
+    @media screen and (max-width: 768px) {
+      .team, .stats {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <div class="about-container">
-    <div class="about-icon"><i class="fas fa-users"></i></div>
+
+  <header>
     <h1>Tentang Kami</h1>
-    <p>
-      Kami adalah tim kreatif yang berfokus pada pembuatan aplikasi sederhana, cepat, dan intuitif bagi semua pengguna.
-    </p>
-    <p>
-      Dengan semangat inovasi dan inklusivitas, kami ingin menjembatani teknologi dengan kebutuhan nyata dalam kehidupan sehari-hari.
-    </p>
-    <p>
-      Terima kasih telah mendukung perjalanan kami.
-    </p>
-    <a href="index.html">← Kembali ke Beranda</a>
+    <p>Kreativitas, Kolaborasi, dan Solusi Digital Masa Kini</p>
+  </header>
+
+  <div class="container">
+
+    <section>
+      <h2>Visi & Misi</h2>
+      <p><strong>Visi:</strong> Menjadi mitra digital terbaik untuk pertumbuhan bisnis dan pendidikan.</p>
+      <p><strong>Misi:</strong> Memberikan solusi kreatif, fungsional, dan inovatif melalui desain dan teknologi modern.</p>
+    </section>
+
+    <section>
+      <h2>Nilai Kami</h2>
+      <ul>
+        <li>Inovasi tanpa batas</li>
+        <li>Kolaborasi tim yang solid</li>
+        <li>Kualitas dan kepuasan pengguna</li>
+        <li>Transparansi dan integritas</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kenapa Memilih Kami?</h2>
+      <p>Kami menghadirkan kombinasi desain yang elegan, teknologi terbaru, dan strategi efektif untuk menciptakan pengalaman digital terbaik. Kami bukan hanya tim pengembang, tetapi mitra dalam pertumbuhan digital Anda.</p>
+    </section>
+
+<section class="team-section animate-section" id="team">
+  <h2>Tim Kami</h2>
+  <p class="team-desc">Kami adalah tim kreatif dan profesional yang berdedikasi dalam menciptakan desain dan solusi digital terbaik untuk Anda.</p>
+
+  <div class="team-grid">
+    <div class="team-card">
+      <img src="https://i.ibb.co/LpSZKHN/avatar1.jpg" alt="Ari - UI Designer">
+      <h3>Ari Wijaya</h3>
+      <p>UI Designer</p>
+    </div>
+    <div class="team-card">
+      <img src="https://i.ibb.co/DVWmYbF/avatar2.jpg" alt="Sita - UX Researcher">
+      <h3>Sita Anindya</h3>
+      <p>UX Researcher</p>
+    </div>
+    <div class="team-card">
+      <img src="https://i.ibb.co/WBnhpTy/avatar3.jpg" alt="Raka - Frontend Dev">
+      <h3>Raka Putra</h3>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="team-card">
+      <img src="https://i.ibb.co/zn0xNZ6/avatar4.jpg" alt="Tia - Project Manager">
+      <h3>Tia Ramadhani</h3>
+      <p>Project Manager</p>
+    </div>
   </div>
+</section>
+    
+    <!-- Tambahkan di dalam <section class="contact animate"> sebelum tombol kontak -->
+<section class="team-video animate">
+  <h2>Video Profil Tim</h2>
+  <p>Lihat bagaimana tim kami bekerja dan berkolaborasi menciptakan produk digital yang luar biasa.</p>
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    <iframe src="https://www.youtube.com/embed/cNekKCLo5RY?rel=0" 
+            frameborder="0" allowfullscreen 
+            style="position:absolute; top:0; left:0; width:100%; height:100%; border:none;">
+    </iframe>
+  </div>
+</section>
+
+<section class="stats-section animate-section" id="stats">
+  <h2>Statistik Tim Kami</h2>
+  <p class="stats-desc">Pencapaian luar biasa kami selama perjalanan kreatif bersama klien terbaik.</p>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7l10 5 10-5-10-5zm0 13l-10-5v6l10 5 10-5v-6l-10 5z" fill="#b87fe2"/></svg>
+      <h3><span class="counter" data-target="135">0</span>+</h3>
+      <p>Proyek Sukses</p>
+    </div>
+    <div class="stat-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V20h14v-3.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05C17.66 13.77 20 15.19 20 17.5V20h4v-3.5c0-2.33-4.67-3.5-7-3.5z" fill="#b87fe2"/></svg>
+      <h3><span class="counter" data-target="28">0</span></h3>
+      <p>Anggota Profesional</p>
+    </div>
+    <div class="stat-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5.45 5.31L17.91 22 12 18.27 6.09 22 7.45 14.58 2 9.27l6.91-1.01L12 2z" fill="#b87fe2"/></svg>
+      <h3><span class="counter" data-target="20">0</span></h3>
+      <p>Penghargaan</p>
+    </div>
+    <div class="stat-card">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 
+      7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 
+      3.81 14.76 3 16.5 3 19.58 3 22 5.42 
+      22 8.5c0 3.78-3.4 6.86-8.55 
+      11.54L12 21.35z" fill="#b87fe2"/></svg>
+      <h3><span class="counter" data-target="99">0</span>%</h3>
+      <p>Kepuasan Klien</p>
+    </div>
+  </div>
+</section>
+
+    <section>
+      <h2>Testimoni</h2>
+      <blockquote>"Layanan mereka sangat profesional dan responsif. Desain aplikasinya luar biasa!" — <em>Klien A</em></blockquote>
+      <blockquote>"Sangat puas! Prosesnya cepat, hasilnya memuaskan." — <em>Klien B</em></blockquote>
+    </section>
+
+    <div class="cta">
+      <a href="contact.html">Hubungi Kami Sekarang</a>
+    </div>
+  </div>
+<script>
+  const counters = document.querySelectorAll('.counter');
+  let animated = false;
+
+  function animateStats() {
+    if (animated) return;
+    const section = document.querySelector("#stats");
+    const rect = section.getBoundingClientRect();
+
+    if (rect.top < window.innerHeight - 100) {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = Math.ceil(target / 80);
+          if (count < target) {
+            counter.innerText = count + increment;
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+      animated = true;
+    }
+  }
+
+  window.addEventListener('scroll', animateStats);
+</script>
 </body>
 </html>
